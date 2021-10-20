@@ -1,0 +1,47 @@
+{
+  "name": "vnd-currency-wallet-plugin",
+  "version": "1.0.0",
+  "description": "Add VND currency to Payvo Wallet",
+  "main": "src/index.js",
+  "author": "qvanphong",
+  "license": "MIT",
+  "private": false,
+  "desktop-wallet": {
+    "title": "VND Currency",
+    "logo": "https://raw.githubusercontent.com/dated/delegate-calculator-wallet-plugin/master/images/logo.png",
+    "images": [
+      "https://raw.githubusercontent.com/dated/delegate-calculator-wallet-plugin/master/images/preview-1.png",
+      "https://raw.githubusercontent.com/dated/delegate-calculator-wallet-plugin/master/images/preview-2.png",
+      "https://raw.githubusercontent.com/dated/delegate-calculator-wallet-plugin/master/images/preview-3.png"
+    ],
+    "categories": [
+      "utility"
+    ],
+    "permissions": [
+      "PROFILE"
+    ],
+    "urls": [
+      "^"
+    ],
+    "minimumVersion": "1.0.0"
+  },
+  "keywords": [
+    "vnd",
+    "@payvo",
+    "wallet-plugin"
+  ],
+  "devDependencies": {
+    "@preconstruct/cli": "^2.1.0"
+  },
+  "scripts": {
+    "format": "yarn lint && yarn prettier",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "prettier": "prettier --write \"./*.{ts,tsx,js,json,md}\" \"./**/*.{ts,tsx,js,json,md}\"",
+    "prepublishOnly": "yarn build",
+    "build": "preconstruct build",
+    "watch": "preconstruct watch"
+  },
+  "dependencies": {
+    "@payvo/profiles": "^1.4.24"
+  }
+}
